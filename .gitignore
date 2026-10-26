@@ -1,0 +1,9 @@
+# Personal interview prep - stays local, never published
+INTERVIEW_PREP.md
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.venv/
+venv/

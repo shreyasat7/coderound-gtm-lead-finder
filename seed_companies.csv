@@ -1,21 +1,17 @@
-company,sector,stage,location,founded_year
-HouseEazy,Real Estate / PropTech,Series A,Mumbai,2023
-Navana AI,Voice AI / Enterprise,Seed,Bengaluru,2024
-Bizup,Fashion / B2B Marketplace,Seed,Bengaluru,2024
-Cautio,AI Dashcam / Fleet Tech,Seed,Bengaluru,2024
-Namma Yatri,Mobility / Consumer Tech,Seed,Bengaluru,2025
-Inamo,Fintech,Series A,Mumbai,2026
-HireBound,HR Tech / Recruiting,Seed,Gurgaon,2026
-Pascal AI Labs,Artificial Intelligence,Seed,Bengaluru,2025
-Navo,Consumer Tech,Seed,Haryana,2025
-Redacto,AI / Document Automation,Seed,Bengaluru,2024
-Green Aero,Deep Tech / Drones,Seed,India,2024
-Zolve,Fintech,Series B,Bengaluru,2021
-Jupiter Money,Fintech,Series C,Mumbai,2019
-Slice,Fintech,Series D,Bengaluru,2016
-Rocketium,Marketing Tech / SaaS,Series A,Bengaluru,2016
-Springworks,HR Tech / SaaS,Series A,Meghalaya,2015
-Zomentum,SaaS / Sales Tech,Series B,Bengaluru,2019
-Khatabook,Fintech / SMB SaaS,Series C,Bengaluru,2018
-Wint Wealth,Fintech,Series A,Bengaluru,2020
-Nudge,B2C AI / Money Coach,Seed,Mumbai,2023
+company,sector,stage,location,founded_year,investors,open_eng_roles,evidence_url
+HouseEazy,Real Estate / PropTech,Series A,Mumbai,2023,Antler; Chiratae Ventures; Alteria Capital,unknown,https://entrackr.com/2024/08/exclusive-proptech-startup-houseeazy-raises-4-mn-in-series-a
+Navana AI,Voice AI / Enterprise,Series A,Bengaluru,2024,Antler; Ronnie Screwvala; Sandeep Singhal,unknown,https://media.dealstreetasia.com/stories/antler-navana-ai-449331
+Cautio,AI Dashcam / Fleet Tech,Seed,Bengaluru,2023,Antler; 9Unicorns; Venture Catalysts; 8i Ventures,unknown,https://entrackr.com/snippets/dashcam-startup-cautio-raises-rs-11-cr-in-seed-round-8938078
+Namma Yatri,Mobility / Consumer Tech,Seed,Bengaluru,2025,Blume Ventures; Antler; Google,unknown,https://www.outlookbusiness.com/corporate/namma-yatri-raises-11-million-in-pre-series-a-led-by-blume-ventures-antler-others
+Inamo,Quick Commerce / Retail Tech,Series A,Mumbai,2024,Antler; Prime Venture Partners; Shastra VC; Gemba Capital,unknown,https://india.entrepreneur.com/news-and-trends/prime-venture-partners-leads-usd-8-mn-investment-in-inamo/503082
+HireBound,HR Tech / Recruiting,Seed,Gurgaon,2024,Antler; Kalaari Capital; Infinyte Club; CareerNet,unknown,https://www.peoplematters.in/news/funding-and-investment/hirebound-raises-dollar2-million-to-automate-hiring-with-ai-48548
+Pascal AI Labs,Artificial Intelligence,Seed,Bengaluru,2024,Antler; Kalaari Capital; Norwest Venture Partners; Info Edge Ventures,unknown,https://news.ventureintelligence.com/private-equity/fintech-focused-ai-saas-startup-pascal-labs-raises-%243.1-m-from-kalaari%2C-info-edge-ventures
+Redacto,AI / Data Privacy,Seed,Bengaluru,2024,unknown,unknown,https://inc42.com/company/redacto/
+Green Aero,Deep Tech / Aerospace,Seed,India,2024,Antler; pi Ventures; Rebalance,unknown,https://entrackr.com/snippets/green-aero-raises-16-mn-in-seed-round-led-by-pi-ventures-9477236
+Zolve,Fintech,Series B,Bengaluru,2021,Accel; Lightspeed; Creaegis; HSBC; DST Global partners,unknown,https://www.fintechfutures.com/digital-banking/neobank-start-up-zolve-raises-251m-in-mix-of-debt-and-equity
+Jupiter Money,Fintech,Series C,Mumbai,2019,Peak XV; Tiger Global; Mirae Asset; BeeNext; 3one4 Capital,unknown,https://entrackr.com/news/jupiter-money-raises-15-mn-from-mirae-asset-beenext-and-3one4-capital-10606028
+Rocketium,Marketing Tech / SaaS,Series A,Bengaluru,2016,Blume Ventures; Emergent Ventures; 021 Capital; 1Crowd,unknown,https://en.wikipedia.org/wiki/Rocketium
+Springworks,HR Tech / SaaS,Series A,Meghalaya,2014,unknown,unknown,
+Zomentum,SaaS / Sales Tech,Series B,Bengaluru,2019,Accel; Elevation Capital; Greenoaks Capital; Eight Roads Ventures,unknown,https://inc42.com/buzz/zomentum-raises-13-mn-series-a-accel-elevation
+Khatabook,Fintech / SMB SaaS,Series C,Bengaluru,2018,Y Combinator; Sequoia; GGV Capital; Tencent; B Capital Group,unknown,https://www.gunder.com/en/news-insights/client-news/khatabook-raises-series-a-funding
+Wint Wealth,Fintech,Series A,Bengaluru,2020,Eight Roads Ventures; Blume Ventures; 3one4 Capital,unknown,https://news.ventureintelligence.com/private-equity/b2c-debt-investment-marketplace-wint-wealth-raises-%2415-m-led-by-eight-roads-
