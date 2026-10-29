@@ -1,17 +1,22 @@
-company,sector,stage,location,founded_year,investors,open_eng_roles,evidence_url
-HouseEazy,Real Estate / PropTech,Series A,Mumbai,2023,Antler; Chiratae Ventures; Alteria Capital,unknown,https://entrackr.com/2024/08/exclusive-proptech-startup-houseeazy-raises-4-mn-in-series-a
-Navana AI,Voice AI / Enterprise,Series A,Bengaluru,2024,Antler; Ronnie Screwvala; Sandeep Singhal,unknown,https://media.dealstreetasia.com/stories/antler-navana-ai-449331
-Cautio,AI Dashcam / Fleet Tech,Seed,Bengaluru,2023,Antler; 9Unicorns; Venture Catalysts; 8i Ventures,unknown,https://entrackr.com/snippets/dashcam-startup-cautio-raises-rs-11-cr-in-seed-round-8938078
-Namma Yatri,Mobility / Consumer Tech,Seed,Bengaluru,2025,Blume Ventures; Antler; Google,unknown,https://www.outlookbusiness.com/corporate/namma-yatri-raises-11-million-in-pre-series-a-led-by-blume-ventures-antler-others
-Inamo,Quick Commerce / Retail Tech,Series A,Mumbai,2024,Antler; Prime Venture Partners; Shastra VC; Gemba Capital,unknown,https://india.entrepreneur.com/news-and-trends/prime-venture-partners-leads-usd-8-mn-investment-in-inamo/503082
-HireBound,HR Tech / Recruiting,Seed,Gurgaon,2024,Antler; Kalaari Capital; Infinyte Club; CareerNet,unknown,https://www.peoplematters.in/news/funding-and-investment/hirebound-raises-dollar2-million-to-automate-hiring-with-ai-48548
-Pascal AI Labs,Artificial Intelligence,Seed,Bengaluru,2024,Antler; Kalaari Capital; Norwest Venture Partners; Info Edge Ventures,unknown,https://news.ventureintelligence.com/private-equity/fintech-focused-ai-saas-startup-pascal-labs-raises-%243.1-m-from-kalaari%2C-info-edge-ventures
-Redacto,AI / Data Privacy,Seed,Bengaluru,2024,unknown,unknown,https://inc42.com/company/redacto/
-Green Aero,Deep Tech / Aerospace,Seed,India,2024,Antler; pi Ventures; Rebalance,unknown,https://entrackr.com/snippets/green-aero-raises-16-mn-in-seed-round-led-by-pi-ventures-9477236
-Zolve,Fintech,Series B,Bengaluru,2021,Accel; Lightspeed; Creaegis; HSBC; DST Global partners,unknown,https://www.fintechfutures.com/digital-banking/neobank-start-up-zolve-raises-251m-in-mix-of-debt-and-equity
-Jupiter Money,Fintech,Series C,Mumbai,2019,Peak XV; Tiger Global; Mirae Asset; BeeNext; 3one4 Capital,unknown,https://entrackr.com/news/jupiter-money-raises-15-mn-from-mirae-asset-beenext-and-3one4-capital-10606028
-Rocketium,Marketing Tech / SaaS,Series A,Bengaluru,2016,Blume Ventures; Emergent Ventures; 021 Capital; 1Crowd,unknown,https://en.wikipedia.org/wiki/Rocketium
-Springworks,HR Tech / SaaS,Series A,Meghalaya,2014,unknown,unknown,
-Zomentum,SaaS / Sales Tech,Series B,Bengaluru,2019,Accel; Elevation Capital; Greenoaks Capital; Eight Roads Ventures,unknown,https://inc42.com/buzz/zomentum-raises-13-mn-series-a-accel-elevation
-Khatabook,Fintech / SMB SaaS,Series C,Bengaluru,2018,Y Combinator; Sequoia; GGV Capital; Tencent; B Capital Group,unknown,https://www.gunder.com/en/news-insights/client-news/khatabook-raises-series-a-funding
-Wint Wealth,Fintech,Series A,Bengaluru,2020,Eight Roads Ventures; Blume Ventures; 3one4 Capital,unknown,https://news.ventureintelligence.com/private-equity/b2c-debt-investment-marketplace-wint-wealth-raises-%2415-m-led-by-eight-roads-
+company,sector,stage,investors,open_eng_roles,evidence_url,ats_provider,ats_slug
+Sarvam AI,Artificial Intelligence,unknown,unknown,23,https://jobs.ashbyhq.com/sarvam,ashby,sarvam
+CodeRabbit,SaaS / Sales Tech,unknown,unknown,7,https://jobs.ashbyhq.com/coderabbit,ashby,coderabbit
+Mem0,Artificial Intelligence,unknown,unknown,1,https://jobs.ashbyhq.com/mem0,ashby,mem0
+Pendo,Marketing Tech / SaaS,unknown,unknown,13,https://boards.greenhouse.io/pendo,greenhouse,pendo
+Perplexity,Artificial Intelligence,unknown,unknown,58,https://jobs.ashbyhq.com/perplexity,ashby,perplexity
+Sierra,Artificial Intelligence,unknown,unknown,60,https://jobs.ashbyhq.com/sierra,ashby,sierra
+Decagon,Artificial Intelligence,unknown,unknown,46,https://jobs.ashbyhq.com/decagon,ashby,decagon
+LangChain,Artificial Intelligence,unknown,unknown,48,https://jobs.ashbyhq.com/langchain,ashby,langchain
+Modal,Artificial Intelligence,unknown,unknown,28,https://jobs.ashbyhq.com/modal,ashby,modal
+Supabase,SaaS / Sales Tech,unknown,unknown,39,https://jobs.ashbyhq.com/supabase,ashby,supabase
+Linear,SaaS / Sales Tech,unknown,unknown,11,https://jobs.ashbyhq.com/linear,ashby,linear
+Vercel,SaaS / Sales Tech,unknown,unknown,36,https://boards.greenhouse.io/vercel,greenhouse,vercel
+Neon,SaaS / Sales Tech,unknown,unknown,1,https://jobs.lever.co/neon,lever,neon
+Atlan,SaaS / Sales Tech,unknown,unknown,3,https://jobs.ashbyhq.com/atlan,ashby,atlan
+Mixpanel,Marketing Tech / SaaS,unknown,unknown,17,https://boards.greenhouse.io/mixpanel,greenhouse,mixpanel
+Amplitude,Marketing Tech / SaaS,unknown,unknown,19,https://jobs.ashbyhq.com/amplitude,ashby,amplitude
+Observe.AI,Voice AI / Enterprise,unknown,unknown,3,https://boards.greenhouse.io/observeai,greenhouse,observeai
+Mindtickle,SaaS / Sales Tech,unknown,unknown,7,https://jobs.lever.co/mindtickle,lever,mindtickle
+Meesho,Consumer Tech,unknown,unknown,11,https://jobs.lever.co/meesho,lever,meesho
+Groww,Fintech,unknown,unknown,0,https://boards.greenhouse.io/groww,greenhouse,groww
+CRED,Fintech,unknown,unknown,2,https://jobs.lever.co/cred,lever,cred

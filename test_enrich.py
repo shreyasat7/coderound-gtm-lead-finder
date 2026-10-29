@@ -16,10 +16,22 @@ import enrich
 # --- Signal 1: open engineering roles --------------------------------------
 
 def test_open_roles_scores_by_volume():
-    assert enrich.open_roles_points("6")[0] == 6
-    assert enrich.open_roles_points("3")[0] == 5
-    assert enrich.open_roles_points("1")[0] == 3
+    """Tiers were recalibrated against the real distribution from the job
+    boards (0-60 eng roles). The old tiers put 15 of 21 companies at maximum
+    points, which is no ranking at all."""
+    assert enrich.open_roles_points("60")[0] == 6
+    assert enrich.open_roles_points("36")[0] == 5
+    assert enrich.open_roles_points("19")[0] == 4
+    assert enrich.open_roles_points("7")[0] == 3
+    assert enrich.open_roles_points("3")[0] == 2
+    assert enrich.open_roles_points("1")[0] == 1
     assert enrich.open_roles_points("0")[0] == 0
+
+
+def test_role_tiers_are_monotonic():
+    """More open roles must never score fewer points."""
+    pts = [enrich.open_roles_points(str(n))[0] for n in (0, 1, 3, 7, 15, 30, 50, 200)]
+    assert pts == sorted(pts)
 
 
 def test_blank_roles_is_unverified_not_a_verified_zero():
@@ -121,11 +133,35 @@ def test_empty_input_returns_empty_not_crash():
 
 def test_full_evidence_lead_ranks_high():
     row = {"company": "X", "sector": "Fintech", "stage": "Seed",
-           "investors": "Accel", "open_eng_roles": "4"}
+           "investors": "Accel", "open_eng_roles": "32"}
     result = enrich.score_lead(row)
     assert result["score"] == 5 + 3 + 2  # roles + investors + stage
     assert result["priority"] == "High"
     assert result["evidence_verified"] is True
+
+
+def test_high_requires_verified_roles():
+    """The gate: investors + stage alone max out at 5, which clears the
+    numeric threshold - but without role evidence it must NOT be High.
+    This is the stage-only failure the rewrite exists to prevent."""
+    row = {"company": "X", "sector": "Fintech", "stage": "Seed",
+           "investors": "Accel", "open_eng_roles": "unknown"}
+    result = enrich.score_lead(row)
+    assert result["score"] == 5
+    assert result["priority"] == "Medium"
+
+
+def test_unknown_stage_is_reported_not_guessed():
+    pts, reason = enrich.stage_points("unknown")
+    assert pts == 0 and "NOT VERIFIED" in reason
+
+
+def test_company_is_never_its_own_social_proof():
+    """Sarvam AI is both a lead and a CodeRound customer - the opener must
+    not say 'we work with Sarvam AI' to Sarvam AI."""
+    key = enrich.canonical_sector("Artificial Intelligence")
+    assert enrich.comparable_customer(key) == "Sarvam AI"
+    assert enrich.comparable_customer(key, "Sarvam AI") != "Sarvam AI"
 
 
 def test_young_company_without_evidence_cannot_rank_high():

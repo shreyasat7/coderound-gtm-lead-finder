@@ -7,3 +7,8 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
+
+# Interview materials - local only, never published
+CodeRound_GTM_Lead_Finder.pptx
+PRESENTATION_WALKTHROUGH.md
+*.pdf

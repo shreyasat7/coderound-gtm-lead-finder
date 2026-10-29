@@ -1,0 +1,254 @@
+{
+  "ashby/amplitude": {
+    "eng": 19,
+    "fetched_at": "2026-10-29T03:29:44+00:00",
+    "ok": true,
+    "titles": [
+      "Staff Software Engineer, Business Systems & Data",
+      "Senior Customer Success Architect",
+      "Engineering: Senior Customer Forward Deployed Engineer",
+      "Senior Software Engineer (Query Infrastructure) ",
+      "Senior Software Engineer; Analytics Compute Platform team"
+    ],
+    "total": 44
+  },
+  "ashby/atlan": {
+    "eng": 3,
+    "fetched_at": "2026-10-29T03:29:43+00:00",
+    "ok": true,
+    "titles": [
+      "AI Native Builder/Architect",
+      "Principal Software Engineer - Agent & App Platform",
+      "Staff Software Engineer - Infrastructure (AI Native)"
+    ],
+    "total": 7
+  },
+  "ashby/coderabbit": {
+    "eng": 7,
+    "fetched_at": "2026-10-29T03:29:31+00:00",
+    "ok": true,
+    "titles": [
+      "Staff GTM Systems Engineer",
+      "Senior Software Engineer - Backend",
+      "Senior Applied AI Engineer",
+      "Senior/Staff Platform Engineer",
+      "Senior Full Stack Engineer"
+    ],
+    "total": 44
+  },
+  "ashby/decagon": {
+    "eng": 46,
+    "fetched_at": "2026-10-29T03:29:36+00:00",
+    "ok": true,
+    "titles": [
+      "Senior Research Engineer",
+      "Engineering Manager, Agent Orchestration",
+      "Software Engineer, Agents",
+      "Staff Software Engineer, Agent Platform",
+      "Staff Software Engineer, Voice Agent"
+    ],
+    "total": 133
+  },
+  "ashby/langchain": {
+    "eng": 48,
+    "fetched_at": "2026-10-29T03:29:36+00:00",
+    "ok": true,
+    "titles": [
+      "Python OSS Engineer ",
+      "Senior Frontend Engineer, AI Observability & Evals Platform ",
+      "Software Engineering Manager, AI Observability & Evals Platform (New York, NY)",
+      "Senior Fullstack Engineer,  AI Observability & Evals Platform (SF)",
+      "Analytics Engineer"
+    ],
+    "total": 99
+  },
+  "ashby/linear": {
+    "eng": 11,
+    "fetched_at": "2026-10-29T03:29:38+00:00",
+    "ok": true,
+    "titles": [
+      "Senior / Staff Fullstack Engineer",
+      "Senior / Staff Fullstack Engineer",
+      "Senior / Staff Product Engineer",
+      "Senior / Staff Product Engineer",
+      "Product Engineer"
+    ],
+    "total": 32
+  },
+  "ashby/mem0": {
+    "eng": 1,
+    "fetched_at": "2026-10-29T03:29:31+00:00",
+    "ok": true,
+    "titles": [
+      "AI Full Stack Engineer"
+    ],
+    "total": 1
+  },
+  "ashby/modal": {
+    "eng": 28,
+    "fetched_at": "2026-10-29T03:29:37+00:00",
+    "ok": true,
+    "titles": [
+      "Member of Technical Staff - Systems",
+      "Forward Deployed Engineer - ML",
+      "Member of Technical Staff - ML Performance",
+      "Member of Technical Staff - SDK",
+      "Forward Deployed Engineer - Systems"
+    ],
+    "total": 43
+  },
+  "ashby/perplexity": {
+    "eng": 58,
+    "fetched_at": "2026-10-29T03:29:33+00:00",
+    "ok": true,
+    "titles": [
+      "Member of Technical Staff (Software Engineer, Monetization)",
+      "Member of Technical Staff (AI Inference Engineer)",
+      "Member of Technical Staff (AI Infrastructure Engineer)",
+      "Member of Technical Staff (Backend/Infrastructure Engineer, Search)",
+      "Member of Technical Staff (Machine Learning Engineer, Search)"
+    ],
+    "total": 133
+  },
+  "ashby/sarvam": {
+    "eng": 23,
+    "fetched_at": "2026-10-29T03:29:30+00:00",
+    "ok": true,
+    "titles": [
+      "Data Scientist - Evaluations, Chanakya",
+      "Embedded Data Scientist, Chanakya",
+      "Embedded Infrastructure Engineer, Chanakya",
+      "Strategic Deployment Engineer, Chanakya",
+      "ML Ops Engineer, Chanakya"
+    ],
+    "total": 45
+  },
+  "ashby/sierra": {
+    "eng": 60,
+    "fetched_at": "2026-10-29T03:29:35+00:00",
+    "ok": true,
+    "titles": [
+      "Software Engineer, Platform",
+      "Software Engineer, Agent",
+      "Software Engineer, Agent",
+      "Research Engineer, Applied Research",
+      "Security Engineer"
+    ],
+    "total": 213
+  },
+  "ashby/supabase": {
+    "eng": 39,
+    "fetched_at": "2026-10-29T03:29:38+00:00",
+    "ok": true,
+    "titles": [
+      "AI Platform Engineer",
+      "Customer Solution Architect (AMER)",
+      "Multigres Engineer",
+      "Developer Relations Engineer ",
+      "Postgres Engineer (AMER)"
+    ],
+    "total": 64
+  },
+  "greenhouse/groww": {
+    "eng": 0,
+    "fetched_at": "2026-10-29T03:29:52+00:00",
+    "ok": true,
+    "titles": [],
+    "total": 10
+  },
+  "greenhouse/mixpanel": {
+    "eng": 17,
+    "fetched_at": "2026-10-29T03:29:44+00:00",
+    "ok": true,
+    "titles": [
+      "Customer Value Architect",
+      "Customer Value Architect III",
+      "Customer Value Architect III ",
+      "Customer Value Architect III ",
+      "Delivery Engineer"
+    ],
+    "total": 44
+  },
+  "greenhouse/observeai": {
+    "eng": 3,
+    "fetched_at": "2026-10-29T03:29:45+00:00",
+    "ok": true,
+    "titles": [
+      "AI Agent Engineer",
+      "AI Agent Engineer, Client Facing",
+      "Staff Infrastructure Security Engineer"
+    ],
+    "total": 7
+  },
+  "greenhouse/pendo": {
+    "eng": 13,
+    "fetched_at": "2026-10-29T03:29:32+00:00",
+    "ok": true,
+    "titles": [
+      "CONTRACTOR: Forward Deployed Engineer, Pendo Predict",
+      "Director of Engineering, Data Platform",
+      "Security Enablement Engineer",
+      "Software Engineer (AI)",
+      "Software Engineer, Full Stack"
+    ],
+    "total": 26
+  },
+  "greenhouse/vercel": {
+    "eng": 36,
+    "fetched_at": "2026-10-29T03:29:40+00:00",
+    "ok": true,
+    "titles": [
+      "DevRel Engineer, Agentic Infrastructure",
+      "Engineering Director, Vercel for Platforms",
+      "Engineering Manager, CDN",
+      "Engineering Manager, Dashboard",
+      "Engineering Manager - Next.js"
+    ],
+    "total": 92
+  },
+  "lever/cred": {
+    "eng": 2,
+    "fetched_at": "2026-10-29T03:29:54+00:00",
+    "ok": true,
+    "titles": [
+      "cloud security engineer",
+      "threat detection engineer"
+    ],
+    "total": 10
+  },
+  "lever/meesho": {
+    "eng": 11,
+    "fetched_at": "2026-10-29T03:29:51+00:00",
+    "ok": true,
+    "titles": [
+      "Data Scientist III",
+      "Data Scientist III (Team- Valmo)",
+      "Engineering Manager -Backend",
+      "Engineering Manager \u2013 AI Engineering",
+      "Engineering Manager- Platform"
+    ],
+    "total": 52
+  },
+  "lever/mindtickle": {
+    "eng": 7,
+    "fetched_at": "2026-10-29T03:29:48+00:00",
+    "ok": true,
+    "titles": [
+      "AI Product Engineer",
+      "Customer Success Engineer - II",
+      "Lead Design Engineer",
+      "Security and Automation Engineer",
+      "SME Engineer IT"
+    ],
+    "total": 19
+  },
+  "lever/neon": {
+    "eng": 1,
+    "fetched_at": "2026-10-29T03:29:42+00:00",
+    "ok": true,
+    "titles": [
+      "Staff Software Engineer"
+    ],
+    "total": 9
+  }
+}

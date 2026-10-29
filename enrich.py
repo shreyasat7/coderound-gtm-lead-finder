@@ -64,12 +64,18 @@ def open_roles_points(raw) -> tuple:
         return 0, f"open roles: unreadable value {text!r}", False
     if count < 0:
         return 0, f"open roles: invalid negative value ({count})", False
-    if count >= 5:
-        return 6, f"{count} open eng roles (hiring hard)", True
-    if count >= 3:
+    if count >= 50:
+        return 6, f"{count} open eng roles (hiring at scale)", True
+    if count >= 30:
         return 5, f"{count} open eng roles", True
+    if count >= 15:
+        return 4, f"{count} open eng roles", True
+    if count >= 7:
+        return 3, f"{count} open eng roles", True
+    if count >= 3:
+        return 2, f"{count} open eng roles", True
     if count >= 1:
-        return 3, f"{count} open eng role(s)", True
+        return 1, f"{count} open eng role(s)", True
     return 0, "0 open eng roles (verified not hiring)", True
 
 
@@ -141,6 +147,8 @@ LEGACY_STAGE_SCORE = {
 def stage_points(stage: str) -> tuple:
     """Return (points, reason). Max 2 points."""
     key = normalise(stage)
+    if key in UNKNOWN_MARKERS:
+        return 0, "stage: NOT VERIFIED"
     if key not in STAGE_POINTS:
         return 0, f"unrecognised stage {stage.strip()!r}"
     return STAGE_POINTS[key], f"{stage.strip()} stage"
@@ -236,8 +244,12 @@ def pain_point(sector_key: str) -> str:
     return _PAIN_BY_KEY.get(sector_key, DEFAULT_PAIN_POINT)
 
 
-def comparable_customer(sector_key: str) -> str:
-    return _CUSTOMER_BY_KEY.get(sector_key, DEFAULT_COMPARABLE_CUSTOMER)
+def comparable_customer(sector_key: str, company: str = "") -> str:
+    """Pick a CodeRound customer as social proof - but never the lead itself."""
+    anchor = _CUSTOMER_BY_KEY.get(sector_key, DEFAULT_COMPARABLE_CUSTOMER)
+    if company and normalise(anchor) == normalise(company):
+        return DEFAULT_COMPARABLE_CUSTOMER if normalise(DEFAULT_COMPARABLE_CUSTOMER) != normalise(company) else "Sarvam AI"
+    return anchor
 
 
 # ---------------------------------------------------------------------------
@@ -246,13 +258,18 @@ def comparable_customer(sector_key: str) -> str:
 # Max = 6 (roles) + 3 (investors) + 2 (stage) = 11.
 # Thresholds are tuned so High means "has verified hiring evidence AND fits
 # the ICP" - not merely "is young".
-HIGH_THRESHOLD = 7
-MEDIUM_THRESHOLD = 4
+HIGH_THRESHOLD = 5
+MEDIUM_THRESHOLD = 3
 MAX_SCORE = 11
 
 
-def priority_for(score: int) -> str:
-    if score >= HIGH_THRESHOLD:
+def priority_for(score: int, roles_verified: bool = True) -> str:
+    """
+    High additionally REQUIRES verified open-role data. Without that gate a
+    lead could reach High on investors + stage alone - which is exactly the
+    stage-only failure this scoring replaced.
+    """
+    if score >= HIGH_THRESHOLD and roles_verified:
         return "High"
     if score >= MEDIUM_THRESHOLD:
         return "Medium"
@@ -268,7 +285,7 @@ def score_lead(row: dict) -> dict:
     total = roles_pts + inv_pts + stage_pts
     return {
         "score": total,
-        "priority": priority_for(total),
+        "priority": priority_for(total, roles_verified),
         "reason": "; ".join([roles_reason, inv_reason, stage_reason]),
         "evidence_verified": roles_verified and inv_verified,
     }
@@ -283,7 +300,7 @@ REAL_STATS = {
 
 def outreach_line(company: str, sector_key: str, stage: str, roles_raw) -> str:
     """Build the opener. Leads with the evidence when we actually have it."""
-    anchor = comparable_customer(sector_key)
+    anchor = comparable_customer(sector_key, company)
     pain = pain_point(sector_key)
 
     roles_text = str(roles_raw or "").strip()
@@ -309,7 +326,7 @@ def enrich_company(row: dict, warnings: list = None) -> dict:
         "priority": scored["priority"],
         "score_reason": scored["reason"],
         "evidence_verified": "yes" if scored["evidence_verified"] else "no",
-        "comparable_existing_customer": comparable_customer(sector_key),
+        "comparable_existing_customer": comparable_customer(sector_key, row.get("company", "")),
         "outreach_opener": outreach_line(
             row.get("company", ""), sector_key, row.get("stage", ""),
             row.get("open_eng_roles"),
@@ -403,9 +420,16 @@ def _report(enriched, rows, raw_rows, warnings) -> None:
           f"Medium {counts['Medium']}/{total}, Low {counts['Low']}/{total}")
 
     # Honest evaluation against the naive baseline.
-    legacy_high = sum(1 for r in rows if legacy_stage_only_priority(r) == "High")
-    print(f"Evaluation: stage-only baseline flagged {legacy_high}/{total} as High; "
-          f"evidence-backed scoring flags {counts['High']}/{total}.")
+    staged = sum(1 for r in rows if normalise(r.get("stage", "")) in STAGE_POINTS)
+    if staged:
+        legacy_high = sum(1 for r in rows if legacy_stage_only_priority(r) == "High")
+        print(f"Evaluation: stage-only baseline flagged {legacy_high}/{total} as High; "
+              f"evidence-backed scoring flags {counts['High']}/{total}.")
+    else:
+        print(f"Evaluation: the stage-only baseline cannot score this list at all "
+              f"(0/{total} leads have a known funding stage).")
+        print(f"            Evidence-backed scoring ranks {counts['High']}/{total} High "
+              f"from real job-board data.")
 
     roles_ok = sum(1 for r in rows if open_roles_points(r.get("open_eng_roles"))[2])
     inv_ok = sum(1 for r in rows if investor_points(r.get("investors"))[2])
@@ -413,7 +437,7 @@ def _report(enriched, rows, raw_rows, warnings) -> None:
           f"open roles {roles_ok}/{total}.")
     if roles_ok < total:
         print(f"  -> {total - roles_ok} lead(s) have no verified open-role data, so "
-              f"they cannot reach High ({HIGH_THRESHOLD}/{MAX_SCORE}) by design.")
+              f"they cannot reach High by design. Run: python3 fetch_roles.py")
 
     if warnings:
         print(f"\n{len(warnings)} data-quality warning(s):", file=sys.stderr)
