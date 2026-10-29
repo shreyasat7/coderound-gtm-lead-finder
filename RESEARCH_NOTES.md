@@ -1,4 +1,16 @@
-# Research Notes — evidence behind `seed_companies.csv`
+# Research Notes — the earlier, investor-researched lead list
+
+> **This documents a previous version of the lead list and is kept for the
+> record.** It covers 16 Indian startups scored on manually researched investor
+> data. That list was replaced once the job-board API integration landed: none
+> of those 16 companies has a public board on Greenhouse, Lever or Ashby — they
+> use Keka, Darwinbox or a plain careers form — so the strongest signal in the
+> score could never be filled for any of them.
+>
+> The current list is 21 companies with live, retrievable hiring data. See
+> `README.md`. The investor-overlap signal described below still exists in
+> `enrich.py` and is still tested; it simply has no data on the current list,
+> and re-researching it is listed as future work.
 
 **Method:** web search against startup-funding press (Entrackr, Inc42, Entrepreneur
 India, DealStreetAsia, Outlook Business, Venture Intelligence, People Matters)
